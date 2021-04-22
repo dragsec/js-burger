@@ -3,7 +3,8 @@ var buttonPrice = document.getElementById("button");
 
 buttonPrice.addEventListener("click", function (){
 
-    var totPrezzo = 0;
+    /* prezzo dell'hamburger base è 1 dollaro */
+    var totPrezzo = 1;
 
     /* setto prezzo in base al prodotto selezionato */
     var nameBurger = ["hamburger", "cheeseburger", "superburger"]
@@ -15,9 +16,11 @@ buttonPrice.addEventListener("click", function (){
         var nameLocal = nameBurger[i];
 
         if (nameLocal === userBurger.value){
-            totPrezzo += i;
+            totPrezzo += i ;
         }
     }
 
+    
 
+    document.getElementById("price").innerHTML = totPrezzo ;
 })
